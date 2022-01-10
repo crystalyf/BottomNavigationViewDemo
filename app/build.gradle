@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    def STRING = 'String'
+    // api base url
+    def BASE_URL = 'BASE_URL'
+    //firebase google auth web_client_id
+    def GOOGLE_FIREBASE_DEFAULT_WEB_CLIENT_ID = 'GOOGLE_FIREBASE_DEFAULT_WEB_CLIENT_ID'
+
+    defaultConfig {
+        applicationId "com.change.towerfarm"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    //dataBinding
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField STRING, GOOGLE_FIREBASE_DEFAULT_WEB_CLIENT_ID, '"425832379442-k61tesqahgiq210lcfpc5cjj4ub629n0.apps.googleusercontent.com"'
+            // api base url
+            buildConfigField STRING, BASE_URL, '"http://www.iot-fitone.com/"'
+            manifestPlaceholders = [facebookAppId: "567480747720487"]
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField STRING, GOOGLE_FIREBASE_DEFAULT_WEB_CLIENT_ID, '"425832379442-k61tesqahgiq210lcfpc5cjj4ub629n0.apps.googleusercontent.com"'
+            // api base url
+            buildConfigField STRING, BASE_URL, '"http://www.iot-fitone.com/"'
+            manifestPlaceholders = [facebookAppId: "567480747720487"]
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.annotation:annotation:1.2.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0-native-mt"
+    // Architecture Components
+    implementation "androidx.fragment:fragment-ktx:1.3.6"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    // Network and Parser
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+    implementation "com.google.guava:guava:30.1.1-jre"
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.2.1')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    // Facebook dependency
+    implementation 'com.facebook.android:facebook-login:8.1.0'
+    //Glide
+    implementation "com.github.bumptech.glide:glide:4.12.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.12.0"
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "com.jakewharton.timber:timber:4.7.1"
+    // MpChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    apply plugin: 'com.google.gms.google-services'
+}

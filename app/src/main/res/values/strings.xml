@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">BottomNavigationViewDemo</string>
+
+    <string name="dialog_ok_button">OK</string>
+    <string name="dialog_error_common_title">"通信接続に失敗しました。</string>
+    <string name="dialog_error_common_message">"エラーが発生しました。アプリを再起動してください。</string>
+    <string name="dialog_network_error_message">電波環境の良い場所で再度接続してください。</string>
+    <string name="dialog_network_not_connect_error_message">ネットワークが有効であることを確認してください。</string>
+    <string name="dialog_json_error_message">取得データに問題が発生しました。再接続してください。</string>
+
+    <string name="tab_top">ホーム</string>
+    <string name="tab_record">操作履歴</string>
+    <string name="tab_notification">お知らせ</string>
+    <string name="tab_friend">友连</string>
+    <string name="tab_consult">コンサル</string>
+    <string name="tab_setting">设定</string>
+
+    <!-- login -->
+    <string name="google_sign_in_text">Googleで続行</string>
+    <string name="facebook_sign_in_text">Facebookで続行</string>
+    <string name="login_button_text">登録</string>
+    <string name="login_register_button_text">新規登録</string>
+    <string name="login_forget_button_text">パスフードを忘れた場合</string>
+    <string name="login_edit_account_hint">メーリルアドレス</string>
+    <string name="login_edit_pass_hint">パスワード</string>
+
+    <string name="facebook_appid">567480747720487</string>
+    <string name="fb_login_protocol_scheme">fb567480747720487</string>
+
+</resources>

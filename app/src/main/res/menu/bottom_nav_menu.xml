@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/tab_top" />
+
+    <item
+        android:id="@+id/navigation_record"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/tab_record" />
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/tab_notification" />
+
+    <item
+        android:id="@+id/navigation_consult"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/tab_consult" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/tab_setting" />
+
+
+</menu>

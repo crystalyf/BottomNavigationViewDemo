@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/host_navigation_start.xml"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.change.towerfarm.fragment.LoginFragment"
+        android:label="LoginFragment">
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPwdFragment"
+            app:destination="@id/forgetPwdFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.change.towerfarm.fragment.RegisterFragment"
+        android:label="RegisterFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPwdFragment"
+        android:name="com.change.towerfarm.fragment.ForgetPwdFragment"
+        android:label="ForgetPwdFragment">
+
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.change.towerfarm.activity.MainActivity"
+        android:label="MainActivity" />
+
+</navigation>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "425832379442",
+    "project_id": "towerfarm-2f9f2",
+    "storage_bucket": "towerfarm-2f9f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425832379442:android:05e5ca0e3a4ffa54c6382b",
+        "android_client_info": {
+          "package_name": "com.change.towerfarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425832379442-cvnfoo1s2h2743sl1h56jl6al7i8k4vm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.change.towerfarm",
+            "certificate_hash": "4cfd880170b30cf347d4e40b5616347b2245cd5d"
+          }
+        },
+        {
+          "client_id": "425832379442-k61tesqahgiq210lcfpc5cjj4ub629n0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ06ky5FobXEIfnytK82lJ-7BN6-qN0ow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425832379442-k61tesqahgiq210lcfpc5cjj4ub629n0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

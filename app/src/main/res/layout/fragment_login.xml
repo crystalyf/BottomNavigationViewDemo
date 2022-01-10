@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.change.towerfarm.viewmodels.StartViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/login_edit_width_margin"
+                android:layout_marginEnd="@dimen/login_edit_width_margin"
+                android:background="@mipmap/gateway_icon" />
+
+            <EditText
+                android:id="@+id/edit_account"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="@dimen/login_edit_width_margin"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="@dimen/login_edit_width_margin"
+                android:drawableStart="@mipmap/gateway_icon"
+                android:hint="@string/login_edit_account_hint"
+                android:paddingStart="20dp"
+                android:text="@={viewModel.loginAccount}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorGrey93"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="@dimen/login_edit_width_margin"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/login_edit_width_margin"
+                android:drawableStart="@mipmap/gateway_icon"
+                android:hint="@string/login_edit_pass_hint"
+                android:paddingStart="20dp"
+                android:text="@={viewModel.loginPassword}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorGrey93"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/login_edit_width_margin"
+            android:paddingEnd="@dimen/login_edit_width_margin"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:background="@color/darkblue"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.loginButtonClick()}"
+                android:text="@string/login_button_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginTop="8dp"
+                android:background="@color/darkblue"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.loginButtonClick()}"
+                android:text="@string/login_register_button_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_forget_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginTop="8dp"
+                android:background="@color/darkblue"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.loginButtonClick()}"
+                android:text="@string/login_forget_button_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_google_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginTop="8dp"
+                android:background="@color/darkblue"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.googleSignInClick()}"
+                android:text="@string/google_sign_in_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/btn_facebook_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginTop="8dp"
+                android:background="@color/darkblue"
+                android:gravity="center"
+                android:text="@string/facebook_sign_in_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
