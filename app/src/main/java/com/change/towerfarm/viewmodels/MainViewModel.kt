@@ -43,15 +43,15 @@ class MainViewModel(
     // LineChart ：
     //X軸座標データ量(水温)
     val historyWaterTemperatureCount = 6
+
     //X軸座標データ(水温):
     val historyWaterTemperatureX = ArrayList<String>()
 
     //X軸座標データ量(ec)
     val historyEcCount = 6
+
     //X軸座標データ(ec):
     val historyEcX = ArrayList<String>()
-
-
 
 
     //fixme: false sensor list data
@@ -136,7 +136,7 @@ class MainViewModel(
     }
 
     /**
-     * click navigation icon
+     * 点击 navigation icon，弹出自定义侧边栏
      */
     fun navigationIconClick() {
         _showAsidePopWindow.postValue(Event(Unit))

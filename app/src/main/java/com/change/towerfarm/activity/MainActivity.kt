@@ -52,6 +52,7 @@ class MainActivity : BaseActivity() {
             R.navigation.navigation_consult,
             R.navigation.navigation_setting
         )
+        //把5个Fragment 以navigation的方式拍到NavController里去了。每一navigation的startDestination就是底部导航切换之后最初显示的Fragment布局
         val controller = dataBinding?.navView?.setupWithNavController(
             navGraphIds = navGraphIds,
             fragmentManager = supportFragmentManager,
@@ -62,11 +63,17 @@ class MainActivity : BaseActivity() {
             setupActionBarWithNavController(navController)
             navController.addOnDestinationChangedListener { nav, destination, args ->
                 when (destination.id) {
-                    //TODO:
+                    //如果是在HomeFragment,那么当点击Toolbar的导航栏按钮的时候，弹出侧边栏
                     R.id.homeFragment -> {
                         dataBinding?.appBarFrame?.toolbar?.setNavigationIcon(R.drawable.ic_drawer)
                         dataBinding?.appBarFrame?.toolbar?.setNavigationOnClickListener {
                             viewModel.navigationIconClick()
+                        }
+                    }
+                    R.id.recordFragment -> {
+                        dataBinding?.appBarFrame?.toolbar?.setNavigationIcon(R.drawable.ic_drawer)
+                        dataBinding?.appBarFrame?.toolbar?.setNavigationOnClickListener {
+
                         }
                     }
                     else -> {
